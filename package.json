@@ -1,0 +1,12 @@
+{
+  "name": "elm_app_tutorial",
+  "version": "1.0.0",
+  "description": "Discovering elm via tutorial",
+  "main": "index.js",
+  "repository": "https://github.com/dominique-vassard/elm-tutorial-app.git",
+  "author": "Dominique VASSARD <dominique.vassard@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "0.9.5"
+  }
+}

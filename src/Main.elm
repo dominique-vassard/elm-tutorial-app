@@ -1,11 +1,12 @@
 module Main exposing (..)
 
 import Html exposing (program)
-import Models exposing (Model)
+import Models exposing (Model, initialModel)
 import Msgs exposing (Msg)
 import Update exposing (update)
 import Subscriptions exposing (subscriptions)
 import View exposing (view)
+import Commands exposing (fetchPlayers)
 
 
 -- MAIN
@@ -23,4 +24,4 @@ main =
 
 init : ( Model, Cmd Msg )
 init =
-    ( "Hello", Cmd.none )
+    ( initialModel, fetchPlayers )

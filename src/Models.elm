@@ -1,10 +1,26 @@
-module Models exposing (Model)
+module Models exposing (..)
 
-import Msgs exposing (..)
+import RemoteData exposing (WebData)
 
 
 -- MODEL
 
 
 type alias Model =
+    { players : WebData (List Player) }
+
+
+initialModel : Model
+initialModel =
+    { players = RemoteData.Loading }
+
+
+type alias PlayerId =
     String
+
+
+type alias Player =
+    { id : PlayerId
+    , name : String
+    , level : Int
+    }

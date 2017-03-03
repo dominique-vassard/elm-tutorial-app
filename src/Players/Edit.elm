@@ -5,6 +5,7 @@ import Html.Attributes exposing (class, value, href)
 import Msgs exposing (Msg)
 import Models exposing (Player)
 import Routing exposing (playersPath)
+import Helpers.View exposing (onLinkClick)
 
 
 view : Player -> Html Msg
@@ -56,7 +57,7 @@ btnLevelDecrease player =
 listBtn : Html Msg
 listBtn =
     a
-        [ class "btn regular", href playersPath ]
+        [ class "btn regular", href playersPath, onLinkClick (Msgs.ChangeLocation playersPath) ]
         [ i [ class "fa fa-chevron-left mr1" ] []
         , text "List"
         ]

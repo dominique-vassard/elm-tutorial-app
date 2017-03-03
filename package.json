@@ -24,5 +24,9 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "dev": "webpack-dev-server --port 3333"
+  },
+  "devDependencies": {
+    "elm": "^0.18.0",
+    "elm-live": "^2.7.4"
   }
 }

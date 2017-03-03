@@ -16,7 +16,7 @@ matchers =
 
 parseLocation : Location -> Route
 parseLocation location =
-    case (parseHash matchers location) of
+    case (parsePath matchers location) of
         Just route ->
             route
 
@@ -26,9 +26,9 @@ parseLocation location =
 
 playersPath : String
 playersPath =
-    "#players"
+    "/players"
 
 
 playerPath : PlayerId -> String
 playerPath id =
-    "#players/" ++ id
+    "/players/" ++ id
